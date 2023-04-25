@@ -15,6 +15,7 @@ def test_request(url, retry=5):
         if retry:
             print(f'[INFO] retry={retry} => {url}')
             return test_request(url, retry=(retry - 1))
+            print(1)
         else:
             raise
     else: return response
